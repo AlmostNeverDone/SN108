@@ -51,9 +51,10 @@ This task introduced us to real-world cybersecurity practices and automated syst
 [Tasks]
 * Configure Extended Numbered ACL (設定編號式擴展 ACL)</b>
 * Apply ACL to Interface (套用 ACL 至介面)</b>
-* Download EICAR Test Virus (下載 EICAR 測試病毒)</b>
-* Run ClamAV Scan (執行 ClamAV 掃描)</b>
-* Schedule Automatic Scans with Crontab (使用 Crontab 設定排程掃描)</b>
+* Verify ACL through PC1 (透過 PC1 驗證 ACL)</b>
+* Configure Extended Named ACL(設定命名式擴展 ACL)</b>
+* Apply Named ACL to Interface (套用命名式 ACL 至介面)</b>
+* Verify ACL through PC2 (透過 PC2 驗證 ACL)</b>
 
 ---------
 
