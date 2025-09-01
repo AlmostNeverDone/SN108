@@ -17,23 +17,26 @@ In this project, we implemented Extended Access Control Lists (ACLs) in Cisco Pa
 
 ---------
 
-<h2>Security and Administrative Implications 資安與系統管理層面涵義</h2>
+<h2>Network Topology and Addressing Table 網路拓樸與位址表</h2>
 
-This task introduced us to real-world cybersecurity practices and automated system maintenance. We learned how to implement scheduled protection routines and handle potential threats using CLI tools, which are essential in any professional IT environment.
+<p align="center">
+<b>Addressing Table (網路拓樸)</b><br/>
+<img src="https://i.imgur.com/FwPJG4r.jpeg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
 
-這項練習讓我們接觸到實際資安操作與系統維護自動化的流程。我們學會如何實作排程式防護機制，並透過指令列工具處理潛在威脅，這些都是專業 IT 環境中不可或缺的技能。
-
----------
-
-<h2>Tools and Concepts Covered 涵蓋工具與概念</h2>
-
-| Aspect <br/>(面向)       | Learning content and purpose <br/>(學習內容與目的)                           |
-| -------- | --------------------------------- |
-| System management <br/>(系統管理)     | Use apt to install and manage software. <br/>(使用 apt 安裝與管理軟體) |
-| Antivirus practice <br/>(防毒實務)     | Install ClamAV, antivirus test and manual scan. <br/>(安裝 ClamAV、防毒測試與手動掃描)               |
-| Information security test <br/>(資安測試)     | Use the EICAR test virus to validate detection capability. <br/>(使用 EICAR 測試病毒驗證偵測能力)          |
-| Automated job management <br/>(自動化作業管理)  | Set up Cron tasks to perform scans regularly. <br/>(設定 Cron 任務，定期執行掃描)                 |
-| Information security practical thinking <br/>(資訊安全實務思維) | Establish a defense cycle for antivirus systems, combining operation with scheduling. <br/>(建立防毒系統的防禦週期，結合操作與排程)           |
+<div align="center">
+<b>Addressing Table (位址對照表)</b><br/>
+  
+| Device <br/>(設備) | Interface <br/>(介面) | IP Address <br/>(IP 位址) | Subnet Mask <br/>(子網路遮罩) | Default Gateway <br/>(預設閘道) |
+| ----------------- | ---------------------- | -------------------------- | ----------------------------- | ------------------------------- |
+| R1                | G0/0                   | 172.22.34.65               | 255.255.255.224               | N/A                             |
+| R1                | G0/1                   | 172.22.34.97               | 255.255.255.240               | N/A                             |
+| R1                | G0/2                   | 172.22.34.1                | 255.255.255.192               | N/A                             |
+| Server            | NIC                    | 172.22.34.62               | 255.255.255.192               | 172.22.34.1                     |
+| PC1               | NIC                    | 172.22.34.66               | 255.255.255.224               | 172.22.34.65                    |
+| PC2               | NIC                    | 172.22.34.98               | 255.255.255.240               | 172.22.34.97                    |
+</div>
 
 ---------
 
@@ -97,7 +100,7 @@ Through this lab, we successfully restricted network access according to differe
   
 This project reinforced key skills in network security and traffic control. The comparison between numbered and named ACLs highlighted that, while both achieve the same technical result, named ACLs provide better readability and maintainability, making them more suitable for real-world environments.
 
-本專案成功在 Kali Linux 上安裝 ClamAV，並透過 EICAR 測試病毒驗證其偵測能力，最後利用 Crontab 設定自動化掃描。此實作凸顯防毒工具的實務整合，以及例行掃描在維護安全環境中的重要性。
+此專題強化了我們在網路安全與流量管控上的實務技能。比較編號式與命名式 ACL 的結果顯示：雖然兩者在技術上功能相同，但 命名式 ACL 在可讀性與維護性上更佳，因此在實際環境中更具優勢。
 
 
 <h2>Reference 參考</h2>
