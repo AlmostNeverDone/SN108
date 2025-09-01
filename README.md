@@ -86,9 +86,11 @@ Through this lab, we successfully restricted network access according to differe
 * PC1 was allowed FTP and ICMP access to the server but denied communication with PC2.<br/>
   (PC1 可使用 FTP 與 ICMP 存取伺服器，但無法與 PC2 通訊)</b>
   <br/>
+  
 * PC2 was allowed HTTP and ICMP access to the server but denied FTP.<br/>
   (PC2 可使用 HTTP 與 ICMP 存取伺服器，但被禁止使用 FTP)</b>
   <br/>
+  
 * All other unspecified traffic was blocked by default due to the implicit deny any any rule.<br/>
   (由於預設的 deny any any 規則，所有未明確允許的流量皆被阻擋)</b>
   <br/>
