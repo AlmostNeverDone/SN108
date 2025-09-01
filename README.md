@@ -1,6 +1,8 @@
 # Network Access Control with Extended ACLs
 使用擴展 ACL 實作網路存取控制
 
+---------
+
 <h2>Outline 簡介</h2>
 
 In this project, we implemented Extended Access Control Lists (ACLs) in Cisco Packet Tracer to precisely control network traffic between multiple hosts and a server. Two types of ACLs were configured and tested: Extended Numbered ACL and Extended Named ACL. These configurations demonstrate how network administrators can enforce policies based on source, destination, and specific services such as FTP, HTTP, and ICMP.
@@ -40,12 +42,21 @@ In this project, we implemented Extended Access Control Lists (ACLs) in Cisco Pa
 
 ---------
 
+<h2>Background Settings 背景設定</h2>
+
+* PC1 is only allowed to access the FTP and Ping servers (PC1 只允許存取 FTP 與 Ping 伺服器)</b> 
+* PC2 is only allowed to access the HTTP and Ping servers (PC2 只允許存取 HTTP 與 Ping 伺服器)</b>
+* PC1 and PC2 are not allowed to ping each other (PC1 與 PC2 之間不得互 ping)</b>
+* All other traffic is denied by default (其他所有流量均預設拒絕)</b>
+
+---------
+
 <h2>Materials and Methods 材料與方法</h2>
 
 [Environment]
-* Oracle VM VirtualBox (VirtualBox 虛擬機)</b>
-* Kali Linux OS (Kali Linux 作業系統)</b>
-* ClamAV antivirus suite (ClamAV 防毒套件)</b>
+* Linux Debian 12 VM with VirtualBox nested VMs (帶有 VirtualBox 嵌套虛擬機的 Linux Debian 12 虛擬機)</b> 
+* UniSQ Student VM Portal (UniSQ 學生用 VM)</b>
+* Cisco Packet Tracer 8.2.2 </b>
 
 [Tasks]
 * Configure Extended Numbered ACL (設定編號式擴展 ACL)</b>
@@ -60,24 +71,32 @@ In this project, we implemented Extended Access Control Lists (ACLs) in Cisco Pa
 <h2>Practice 實踐</h2>
 
 <p align="center">
-<b>Task 1: Install ClamAV<br/>(安裝 ClamAV)</b><br/>
-<img src="https://i.imgur.com/eRoOvKQ.jpeg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<b>Task 1: Configure Extended Numbered ACL<br/>(設定編號式擴展 ACL)</b><br/>
+<img src="https://i.imgur.com/o7og36K.jpeg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<b>Task 2: Update Virus Database<br/>(更新病毒碼) </b><br/>
-<img src="https://i.imgur.com/a2Uo3iI.jpeg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<b>Task 2: Apply ACL to Interface<br/>(套用 ACL 至介面) </b><br/>
+<img src="https://i.imgur.com/vmVFeGi.jpeg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<b>Task 3: Download EICAR Test Virus<br/>(下載 EICAR 測試病毒) </b><br/>
-<img src="https://i.imgur.com/7VMyOWI.jpeg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<b>Task 3: Verify ACL (PC1)<br/>[驗證 ACL (PC1)] </b><br/>
+<img src="https://i.imgur.com/OixpDDZ.jpeg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<b>Task 4: Run ClamAV Scan<br/>(執行 ClamAV 掃描) </b><br/>
-<img src="https://i.imgur.com/BHptf5x.jpeg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<b>Task 4: Configure Extended Named ACL<br/>(設定命名式擴展 ACL) </b><br/>
+<img src="https://i.imgur.com/zjIPc6G.jpeg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<b>Task 5: Schedule Automatic Scans with Crontab使用 Crontab 設定排程掃描) </b><br/>
-<img src="https://i.imgur.com/EJrT3da.jpeg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<b>Task 5: Apply Named ACL to Interface<br/>(套用命名式 ACL 至介面) </b><br/>
+<img src="https://i.imgur.com/cd3yJZ8.jpeg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<b>Task 6-1: Verify Through Command Prompt<br/>(透過命令提示字元驗證) </b><br/>
+<img src="https://i.imgur.com/VYtFgzK.jpeg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<b>Task 6-2: Verify Through Web Browser<br/>(透過 Web 瀏覽器驗證) </b><br/>
+<img src="https://i.imgur.com/Zg8CtYl.jpeg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 
 ---------
@@ -102,6 +121,7 @@ This project reinforced key skills in network security and traffic control. The 
 
 此專題強化了我們在網路安全與流量管控上的實務技能。比較編號式與命名式 ACL 的結果顯示：雖然兩者在技術上功能相同，但 命名式 ACL 在可讀性與維護性上更佳，因此在實際環境中更具優勢。
 
+---------
 
 <h2>Reference 參考</h2>
 
